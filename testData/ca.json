@@ -1,0 +1,84 @@
+{
+    "1_130": {
+        "DE": {
+            "PRIVACY": {
+                "HEADER": "AUTHORIZATION FOR DATA PROCESSING",
+                "HEADER_SUB_1": "I confirm I’m over 16 years old and I have read the Privacy Policy provided by the Data Controllers in accordance with local applicable laws, and I",
+                "GENERAL_CONSENT_NAM": "",
+                "HEADER_SUB_2": "",
+                "FLAG_MARKETING_OPTIN_TEXT": "I agree to the use of the Personal \nData for marketing purposes (newsletters, news and promotions), in accordance to letter b. paragraph 2 of the information notice",
+                "FLAG_PROFILING_OPTIN_TEXT": "I agree to the use of the Personal Data for profiling purposes of my consumer behaviour, in accordance to letter c. paragraph 2 of the information notice",
+                "HEADER_SUB_3": "",
+                "FOOTER_SUB_1": "I understand that providing the personal data for profiling and marketing purposes is optional.",
+                "FLAG_TEXT_MESSAGE": "",
+                "COMMUNICATION_DATA": "",
+                "PRIVACY_MARKETING_LINK": "",
+                "PRIVACY_PROFILING_LINK": "",
+                "PRIVACY_TERMCOND_LINK": "",
+                "PRIVACY_LINK": "I confirm that I have read privacy policy.",
+                "PRIVACY_LINK_DCB": "I confirm that I have read privacy policy.",
+                "AGREE": ""
+            }
+        },
+        "DEFAULT": {
+            "PRIVACY": {
+                "HEADER": "AUTHORIZATION FOR DATA PROCESSING",
+                "GENERAL_CONSENT_NAM": "I confirm I’m over 16 years old and I have read the Privacy Policy provided by the Data Controllers in accordance with local applicable laws, and I",
+                "HEADER_SUB_2": "",
+                "FLAG_MARKETING_OPTIN_TEXT": "I agree to the use of the Personal Data for marketing purposes (newsletters, news and promotions), in accordance to letter b. paragraph 2 of the information notice",
+                "FLAG_PROFILING_OPTIN_TEXT": "I agree to the use of the Personal Data for profiling purposes of my consumer behaviour, in accordance to letter c. paragraph 2 of the information notice",
+                "HEADER_SUB_3": "",
+                "FOOTER_SUB_1": "I understand that providing the personal data for profiling and marketing purposes is optional.",
+                "FLAG_TEXT_MESSAGE": "",
+                "COMMUNICATION_DATA": "",
+                "PRIVACY_MARKETING_LINK": "",
+                "PRIVACY_PROFILING_LINK": "",
+                "PRIVACY_TERMCOND_LINK": "",
+                "PRIVACY_LINK": "I confirm that I have read privacy policy.",
+                "PRIVACY_LINK_DCB": "I confirm that I have read privacy policy.",
+                "AGREE": ""
+            }
+        }
+    },
+    "1_60": {
+        "DE": {
+            "PRIVACY": {
+                "HEADER": "AUTHORIZATION FOR DATA PROCESSING",
+                "HEADER_SUB_1": "I confirm I’m over 16 years old and I have read the Privacy Policy provided by the Data Controllers in accordance with local applicable laws, and I",
+                "GENERAL_CONSENT_NAM": "",
+                "HEADER_SUB_2": "",
+                "FLAG_MARKETING_OPTIN_TEXT": "I agree to the use of the Personal Data for marketing purposes (newsletters, news and promotions), in accordance to letter b. paragraph 2 of the information notice",
+                "FLAG_PROFILING_OPTIN_TEXT": "I agree to the use of the Personal Data for profiling purposes of my consumer behaviour, in accordance to letter c. paragraph 2 of the information notice",
+                "HEADER_SUB_3": "",
+                "FOOTER_SUB_1": "I understand that providing the personal data for profiling and marketing purposes is optional.",
+                "FLAG_TEXT_MESSAGE": "",
+                "COMMUNICATION_DATA": "",
+                "PRIVACY_MARKETING_LINK": "",
+                "PRIVACY_PROFILING_LINK": "",
+                "PRIVACY_TERMCOND_LINK": "",
+                "PRIVACY_LINK": "I confirm that I have read privacy policy.",
+                "PRIVACY_LINK_DCB": "I confirm that I have read privacy policy.",
+                "AGREE": ""
+            }
+        },
+        "DEFAULT": {
+            "PRIVACY": {
+                "HEADER": "AUTHORIZATION FOR DATA PROCESSING",
+                "GENERAL_CONSENT_NAM": "I confirm I’m over 16 years old and I have read the Privacy Policy provided by the Data Controllers in accordance with local applicable laws, and I",
+                "HEADER_SUB_2": "",
+                "FLAG_MARKETING_OPTIN_TEXT": "I agree to the use of the Personal Data for marketing purposes (newsletters, news and promotions), in accordance to letter b. paragraph 2 of the information notice",
+                "FLAG_PROFILING_OPTIN_TEXT": "I agree to the use of the Personal Data for profiling purposes of my consumer behaviour, in accordance to letter c. paragraph 2 of the information notice",
+                "HEADER_SUB_3": "",
+                "FOOTER_SUB_1": "I understand that providing the personal data for profiling and marketing purposes is optional.",
+                "FLAG_TEXT_MESSAGE": "",
+                "COMMUNICATION_DATA": "",
+                "PRIVACY_MARKETING_LINK": "",
+                "PRIVACY_PROFILING_LINK": "",
+                "PRIVACY_TERMCOND_LINK": "",
+                "PRIVACY_LINK": "I confirm that I have read privacy policy.",
+                "PRIVACY_LINK_DCB": "I confirm that I have read privacy policy.",
+                "AGREE": ""
+            }
+        }
+    }
+}   
