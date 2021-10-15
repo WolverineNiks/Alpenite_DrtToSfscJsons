@@ -41,15 +41,43 @@ import json
 import copy
 import os
 
-_DRTJsonsDirectoryPath = 'C:\\Users\\NikhilChander\\Documents\\OTB\\2021.10.13 LatestPrivacyJsons from DRT\\testData'
-_SFSCJsonsFilePath = 'C:\\Users\\NikhilChander\\Documents\\OTB\\2021.10.13 LatestPrivacyJsons from DRT\\privacyTranslations.json'
-_brandsList = ['1_130', '1_60', '2_20', '4_40', '5_80']
+_DRTJsonsDirectoryPath = 'C:\\Users\\NikhilChander\\Documents\\OTB\\GIT_2021.10.13 OTB_PrivacyJsonsConverter\\testResultJsons'
+_SFSCJsonsFilePath = 'C:\\Users\\NikhilChander\\Documents\\OTB\\GIT_2021.10.13 OTB_PrivacyJsonsConverter\\privacyTranslations.json'
+_ResultFilePath = 'C:\\Users\\NikhilChander\\Documents\\OTB\\GIT_2021.10.13 OTB_PrivacyJsonsConverter\\RESULT.json'
+_brandsList = {
+    '1_130': {
+        "LINK_Privacy_marketing__c": "/justcavallipreferences/JustCavalli_MarketingPrivacy",
+        "LINK_Privacy_policy": "/justcavallipreferences/JustCavalli_PrivacyPolicy",
+        "LINK_Privacy_profiling__c": "/justcavallipreferences/JustCavalli_ProfilingPrivacy"
+    }, 
+    '1_60': {
+        "LINK_Privacy_marketing__c": "/dsquaredpreferences/DSQUARED_MarketingPrivacy",
+        "LINK_Privacy_policy": "/dsquaredpreferences/DSQUARED_PrivacyPolicy",
+        "LINK_Privacy_profiling__c": "/dsquaredpreferences/DSQUARED_ProfilingPrivacy"
+    }, 
+    '2_20': {
+        "LINK_Privacy_marketing__c": "/dieselpreferences/Diesel_MarketingPrivacy",
+        "LINK_Privacy_policy": "/dieselpreferences/Diesel_PrivacyPolicy",
+        "LINK_Privacy_profiling__c": "/dieselpreferences/Diesel_ProfilingPrivacy"
+    }, 
+    '4_40': {
+        "LINK_Privacy_marketing__c": "/marnipreferences/Marni_MarketingPrivacy",
+        "LINK_Privacy_policy": "/marnipreferences/Marni_PrivacyPolicy",
+        "LINK_Privacy_profiling__c": "/marnipreferences/Marni_ProfilingPrivacy"
+    }, 
+    '5_80': {
+        "LINK_Privacy_marketing__c": "/maisonmargielapreferences/MaisonMargiela_MarketingPrivacy",
+        "LINK_Privacy_policy": "/maisonmargielapreferences/MaisonMargiela_PrivacyPolicy",
+        "LINK_Privacy_profiling__c": "/maisonmargielapreferences/MaisonMargiela_ProfilingPrivacy"
+    }}
+
 _languageIsoToDescMap = {
     "ca":"Catalan",
     "da":"Dansk",
     "de":"Deutsch",
     "el":"ελληνικά",
     "en":"English",
+    "en_GB":"English",
     "es":"Español",
     "fi":"Suomi",
     "fr":"Français",
@@ -63,45 +91,61 @@ _languageIsoToDescMap = {
     "zh_HK":"Cantonese",
     "zh":"Chinese"
 }
-_diesel = 'diesel'
 
 
-def createSfscObject(newSfscJsonObject, drtJsonObject, sfscBasicObj, drtBasicObj, brand, lang, country):
-    newSfscJsonObject = 'ee'
-    sfscBasicObject = {
+def fillNewSfscJsonObj(drtBasicObj, newSfscJsonObject, lang, country, brand):
+    print(brand + '>' + country + '>' + lang)
+    sfscBasicObj = {
         "LABEL": _languageIsoToDescMap[lang] if lang in _languageIsoToDescMap else lang,
-        "LINK_Privacy_marketing__c": "/justcavallipreferences/JustCavalli_MarketingPrivacy",
-        "LINK_Privacy_policy": "/justcavallipreferences/JustCavalli_PrivacyPolicy",
-        "LINK_Privacy_profiling__c": "/justcavallipreferences/JustCavalli_ProfilingPrivacy",
-        "SUB_TITLE_1": "I confirm I’m over 16 years old and I have read the Privacy Policy provided by the Data Controllers in accordance with local applicable laws, and I",
-        "SUB_TITLE_2": "",
-        "TEXT_Communication_Data__c": "",
-        "TEXT_Privacy_general_consent_NAM__c": "",
+        "LINK_Privacy_marketing__c": _brandsList[brand]['LINK_Privacy_marketing__c'],
+        "LINK_Privacy_policy": _brandsList[brand]['LINK_Privacy_policy'],
+        "LINK_Privacy_profiling__c": _brandsList[brand]['LINK_Privacy_profiling__c'],
+        "SUB_TITLE_1": drtBasicObj['HEADER_SUB_1'] if 'HEADER_SUB_1' in drtBasicObj else "",
+        "SUB_TITLE_2": drtBasicObj['FOOTER_SUB_1'] if 'FOOTER_SUB_1' in drtBasicObj else "",
+        "TEXT_Communication_Data__c": drtBasicObj['COMMUNICATION_DATA'] if 'COMMUNICATION_DATA' in drtBasicObj else "",
+        "TEXT_Privacy_general_consent_NAM__c": drtBasicObj['GENERAL_CONSENT_NAM'],
         "TEXT_Privacy_HK__c": "",
-        "TEXT_Privacy_marketing__c": "I agree to the use of the Personal Data for marketing purposes (newsletters, news and promotions), in accordance to letter b. paragraph 2 of the information notice",
+        "TEXT_Privacy_marketing__c": drtBasicObj['FLAG_MARKETING_OPTIN_TEXT'],
         "TEXT_Privacy_marketing_online__c": "",
-        "TEXT_Privacy_profiling__c": "I agree to the use of the Personal Data for profiling purposes of my consumer behaviour, in accordance to letter c. paragraph 2 of the information notice",
-        "TEXT_Privacy_text_message__c": "",
-        "TEXT_Unsubscribe__c": "",
+        "TEXT_Privacy_profiling__c": drtBasicObj['FLAG_PROFILING_OPTIN_TEXT'],
+        "TEXT_Privacy_text_message__c": drtBasicObj['FLAG_TEXT_MESSAGE'],
+        "TEXT_Newsletter_Unsubscribe__c": "",#NOT PRESENT IN DRT
+        "TEXT_Unsubscribe__c": "",  #NOT PRESENT IN DRT
         "TITLE": "AUTHORIZATION FOR DATA PROCESSING"
     }
+    if(country == 'BG'):
+        print(country)
+    if brand in newSfscJsonObject:
+        if country in newSfscJsonObject[brand] or 'INTERNATIONAL' in newSfscJsonObject[brand]:
+            if lang in newSfscJsonObject[brand][country]:
+                newSfscJsonObject[brand][country][lang] = sfscBasicObj
+            else:
+                newSfscJsonObject[brand][country][lang] = {}
+                newSfscJsonObject[brand][country][lang] = sfscBasicObj
+        elif country == 'DEFAULT':
+            newSfscJsonObject[brand]['INTERNATIONAL'] = {}
+            newSfscJsonObject[brand]['INTERNATIONAL'][lang] = {}
+            newSfscJsonObject[brand]['INTERNATIONAL'][lang] = sfscBasicObj
+        else:
+            newSfscJsonObject[brand][country] = {}
+            newSfscJsonObject[brand][country][lang] = {}
+            newSfscJsonObject[brand][country][lang] = sfscBasicObj
+    else:
+        newSfscJsonObject[brand] = {}
+        newSfscJsonObject[brand][country] = {}
+        newSfscJsonObject[brand][country][lang] = {}
+        newSfscJsonObject[brand][country][lang] = sfscBasicObj
 
 #Create DRT FILES JSON OBJECT (n files)
 drtJsonObject = {}
-data = '{\n'
 print('Reading files...')
 for fileEntry in os.scandir(_DRTJsonsDirectoryPath):
     if (fileEntry.path.endswith(".json")) and fileEntry.is_file():
-        print(fileEntry.path)
-        data = data + '\t\"' + os.path.basename(fileEntry.path)[:-5]  + '\":\n\t\t' 
+        print(fileEntry.path) 
         fRead = open(fileEntry.path, encoding="utf-8")
-        data = data + fRead.read()
-        data = data + ','
-        #drtJsonObject[os.path.basename(fileEntry.path)[:-5]] = data
+        drtData = json.load(fRead)
+        drtJsonObject[os.path.basename(fileEntry.path)[:-5]] = drtData
         fRead.close()
-data = data[:-1]
-data = data + '\n}'
-drtJsonObject = json.loads(data)
 
 #CREATE SFSC FILE JSON OBJECT (1 file)
 fRead = open(_SFSCJsonsFilePath, encoding="utf-8")
@@ -110,16 +154,19 @@ fRead.close()
 sfscJsonObject = data
 
 
+print('Creating new JSON file...')
 newSfscJsonObject = {}
-for brand in _brandsList:
-    sfscBasicObj = sfscJsonObject[brand]["INTERNATIONAL"]["en"]
-    newSfscJsonObject[brand] = {}
-    for lang in drtJsonObject.keys():
-        langObj = drtJsonObject[lang]
-        for country in drtJsonObject[lang][brand].keys():
-            newSfscJsonObject[brand][country] = {}
-            newSfscJsonObject[brand][country][lang] = {}
-            for drtObject in drtJsonObject[lang][brand][country]["PRIVACY"]:
-                drtBasicObj = drtJsonObject[lang][brand][country]["PRIVACY"][drtObject]
-                print(newSfscJsonObject)
-                #createSfscObject(newSfscJsonObject, drtJsonObject, sfscBasicObj, drtBasicObj, brand, lang, country)
+for lang in drtJsonObject:
+    for brand in drtJsonObject[lang]:
+        for country in drtJsonObject[lang][brand]:
+            drtBasicObj = drtJsonObject[lang][brand][country]['PRIVACY']
+            if(lang.casefold() == 'en_GB'.casefold() and country == 'GB'):
+                fillNewSfscJsonObj(drtBasicObj, newSfscJsonObject, 'en', country, brand)
+            else:
+                fillNewSfscJsonObj(drtBasicObj, newSfscJsonObject, lang, country, brand)
+                
+            
+
+with open(_ResultFilePath, 'w', encoding='utf-8') as f:
+    json.dump(newSfscJsonObject, f, ensure_ascii=False, indent=4)
+    
