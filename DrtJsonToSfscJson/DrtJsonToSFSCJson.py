@@ -95,6 +95,7 @@ _languageIsoToDescMap = {
 
 def fillNewSfscJsonObj(drtBasicObj, newSfscJsonObject, lang, country, brand):
     print(brand + '>' + country + '>' + lang)
+    percorso = brand + '>' + country + '>' + lang
     sfscBasicObj = {
         "LABEL": _languageIsoToDescMap[lang] if lang in _languageIsoToDescMap else lang,
         "LINK_Privacy_marketing__c": _brandsList[brand]['LINK_Privacy_marketing__c'],
@@ -110,22 +111,16 @@ def fillNewSfscJsonObj(drtBasicObj, newSfscJsonObject, lang, country, brand):
         "TEXT_Privacy_profiling__c": drtBasicObj['FLAG_PROFILING_OPTIN_TEXT'],
         "TEXT_Privacy_text_message__c": drtBasicObj['FLAG_TEXT_MESSAGE'],
         "TEXT_Newsletter_Unsubscribe__c": "",#NOT PRESENT IN DRT
-        "TEXT_Unsubscribe__c": "",  #NOT PRESENT IN DRT
+        "TEXT_Unsubscribe__c": "Unsubscribe TEXT",  #NOT PRESENT IN DRT
         "TITLE": "AUTHORIZATION FOR DATA PROCESSING"
     }
-    if(country == 'BG'):
-        print(country)
     if brand in newSfscJsonObject:
-        if country in newSfscJsonObject[brand] or 'INTERNATIONAL' in newSfscJsonObject[brand]:
+        if country in newSfscJsonObject[brand]:
             if lang in newSfscJsonObject[brand][country]:
                 newSfscJsonObject[brand][country][lang] = sfscBasicObj
             else:
                 newSfscJsonObject[brand][country][lang] = {}
                 newSfscJsonObject[brand][country][lang] = sfscBasicObj
-        elif country == 'DEFAULT':
-            newSfscJsonObject[brand]['INTERNATIONAL'] = {}
-            newSfscJsonObject[brand]['INTERNATIONAL'][lang] = {}
-            newSfscJsonObject[brand]['INTERNATIONAL'][lang] = sfscBasicObj
         else:
             newSfscJsonObject[brand][country] = {}
             newSfscJsonObject[brand][country][lang] = {}
@@ -160,8 +155,12 @@ for lang in drtJsonObject:
     for brand in drtJsonObject[lang]:
         for country in drtJsonObject[lang][brand]:
             drtBasicObj = drtJsonObject[lang][brand][country]['PRIVACY']
-            if(lang.casefold() == 'en_GB'.casefold() and country == 'GB'):
+            if(lang == 'en_GB' and country == 'DEFAULT'):
+                fillNewSfscJsonObj(drtBasicObj, newSfscJsonObject, 'en', 'INTERNATIONAL', brand)
+            elif(lang == 'en_GB'):
                 fillNewSfscJsonObj(drtBasicObj, newSfscJsonObject, 'en', country, brand)
+            elif(country == 'DEFAULT'):
+                fillNewSfscJsonObj(drtBasicObj, newSfscJsonObject, lang, 'INTERNATIONAL', brand)
             else:
                 fillNewSfscJsonObj(drtBasicObj, newSfscJsonObject, lang, country, brand)
                 
