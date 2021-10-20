@@ -41,9 +41,9 @@ import json
 import copy
 import os
 
-_DRTJsonsDirectoryPath = 'C:\\Users\\NikhilChander\\Documents\\OTB\\GIT_2021.10.13 OTB_PrivacyJsonsConverter\\testResultJsons'
-_SFSCJsonsFilePath = 'C:\\Users\\NikhilChander\\Documents\\OTB\\GIT_2021.10.13 OTB_PrivacyJsonsConverter\\privacyTranslations.json'
-_ResultFilePath = 'C:\\Users\\NikhilChander\\Documents\\OTB\\GIT_2021.10.13 OTB_PrivacyJsonsConverter\\RESULT.json'
+_DRTJsonsDirectoryPath = 'C:\\Users\\NikhilChander\\Documents\\OTB\\GIT_2021.10.13 OTB_PrivacyJsonsConverter\\DrtJsonToSfscJson\\testResultJsons'
+_SFSCJsonsFilePath = 'C:\\Users\\NikhilChander\\Documents\\OTB\\GIT_2021.10.13 OTB_PrivacyJsonsConverter\\DrtJsonToSfscJson\\privacyTranslations.json'
+_ResultFilePath = 'C:\\Users\\NikhilChander\\Documents\\OTB\\GIT_2021.10.13 OTB_PrivacyJsonsConverter\\DrtJsonToSfscJson\\RESULT.json'
 _brandsList = {
     '1_130': {
         "LINK_Privacy_marketing__c": "/justcavallipreferences/JustCavalli_MarketingPrivacy",
@@ -69,7 +69,8 @@ _brandsList = {
         "LINK_Privacy_marketing__c": "/maisonmargielapreferences/MaisonMargiela_MarketingPrivacy",
         "LINK_Privacy_policy": "/maisonmargielapreferences/MaisonMargiela_PrivacyPolicy",
         "LINK_Privacy_profiling__c": "/maisonmargielapreferences/MaisonMargiela_ProfilingPrivacy"
-    }}
+    }
+}
 
 _languageIsoToDescMap = {
     "ca":"Catalan",
