@@ -1,0 +1,48 @@
+{
+    "INTERNATIONAL": {
+        "en": {
+            "TEXT_Newsletter_Unsubscribe__c": "Unsubscribe to Maison Margiela Newsletters <br></br> By ticking this checkbox, you will stop receiving newsletters from Maison Margiela official channel. <br></br> But you will still be contacted by our stores in 1-to-1 via the contact information you gave. May you want to stop these communications as well, you can contact our Customer care.",
+            "TEXT_Unsubscribe__c": "By ticking this checkbox, you will stop receiving newsletters from Maison Margiela official channel. <br></br> But you will still be contacted by our stores in 1-to-1 via the contact information you gave. May you want to stop these communications as well, you can uncheck the marketing check box above or contact our Customer care."
+        },
+        "de": {
+            "TEXT_Newsletter_Unsubscribe__c": "Vom Newsletter von Maison Margiela abmelden <br></br>Wenn Sie dieses Kontrollkästchen aktivieren, erhalten Sie keine Newsletter mehr vom offiziellen Kanal von Maison Margiela. <br></br>Unsere Stores werden Sie allerdings über die persönlichen Kontaktinformationen, die Sie uns gegeben haben, weiterhin kontaktieren. Wenn Sie diese Kommunikation ebenfalls beenden wollen, dann wenden Sie sich bitte an unseren Kundenservice.",
+            "TEXT_Unsubscribe__c": "Wenn Sie dieses Kontrollkästchen aktivieren, erhalten Sie keine Newsletter mehr vom offiziellen Kanal von Maison Margiela. <br></br> Unsere Stores werden Sie allerdings über die persönlichen Kontaktinformationen, die Sie uns gegeben haben, weiterhin kontaktieren. Wenn Sie diese Kommunikation ebenfalls beenden wollen, dann nehmen Sie bitte die Markierung aus dem obenstehenden Kontrollfeld ‚Marketing‘ oder wenden sich an unseren Kundenservice."
+        },
+        "es": {
+            "TEXT_Newsletter_Unsubscribe__c": "Cancelar la suscripción a los boletines de Maison Margiela <br></br>Seleccionando esta casilla, dejará de recibir los boletines informativos del canal oficial de Maison Margiela.  <br></br>Sin embargo, nuestras tiendas seguirán poniéndose en contacto con usted de manera individual utilizando la información de contacto que haya proporcionado. Si también desea dejar de recibir estas comunicaciones, puede ponerse en contacto con nuestro Servicio de Atención al Cliente.",
+            "TEXT_Unsubscribe__c": "Seleccionando esta casilla, dejará de recibir los boletines informativos del canal oficial de Maison Margiela. <br></br> Sin embargo, nuestras tiendas seguirán poniéndose en contacto con usted de manera individual utilizando la información de contacto que haya proporcionado. Si también desea dejar de recibir estas comunicaciones, puede desmarcar la casilla de marketing de arriba o ponerse en contacto con nuestro Servicio de Atención al Cliente."
+        },
+        "fr": {
+            "TEXT_Newsletter_Unsubscribe__c": "Se désinscrire des newsletters Maison Margiela <br></br>En cochant cette case, vous cesserez de recevoir les newsletters depuis le canal officiel de Maison Margiela. <br></br>Mais vous serez toujours contacté par nos magasins de manière individuelle via les coordonnées que vous avez données. Si vous souhaitez également cesser de recevoir ces communications, vous pouvez contacter notre Service Client.",
+            "TEXT_Unsubscribe__c": "En cochant cette case, vous cesserez de recevoir les newsletters depuis le canal officiel de Maison Margiela. <br></br> Mais vous serez toujours contacté par nos magasins de manière individuelle via les coordonnées que vous avez données. Si vous souhaitez également cesser de recevoir ces communications, vous pouvez décocher la case marketing ci-dessus ou contacter notre Service Client."
+        },
+        "it": {
+            "TEXT_Newsletter_Unsubscribe__c": "Annullamento iscrizione alle newsletter Maison Margiela <br></br>Spuntando questa checkbox non riceverai più newsletter dal canale ufficiale di Maison Margiela. <br></br>Potrai comunque essere contattato personalmente dai nostri store tramite i recapiti da te forniti. Se desideri interrompere anche queste comunicazioni, contatta il Servizio clienti.",
+            "TEXT_Unsubscribe__c": "Spuntando questa checkbox non riceverai più newsletter dal canale ufficiale di Maison Margiela. <br></br> Potrai comunque essere contattato personalmente dai nostri store tramite i recapiti da te forniti. Se desideri interrompere anche queste comunicazioni, deseleziona la casella marketing qui sopra oppure contatta il Servizio clienti."
+        },
+        "ja": {
+            "TEXT_Newsletter_Unsubscribe__c": "Maison Margielaのニュースレターの配信停止 <br></br> メゾン マルジェラ公式チャンネルからのニュースレター配信を止めるには、こちらにチェックをいれてください。 <br></br> 配信停止後も、店舗よりお客様個人宛てのご連絡をさせていただくことがございます。店舗からお客様個人へのご連絡についても停止を希望される場合は、クライアントサービスまでお問い合わせください。",
+            "TEXT_Unsubscribe__c": "メゾン マルジェラ公式チャンネルからのニュースレター配信を止めるには、こちらにチェックをいれてください。 <br></br> 配信停止後も、店舗よりお客様個人宛てのご連絡をさせていただくことがございます。店舗からお客様個人へのご連絡についても停止を希望される場合は、上のマーケティングのチェックボックスのチェックを外すか、クライアントサービスまでお問い合わせください。"
+        },
+        "ko": {
+            "TEXT_Newsletter_Unsubscribe__c": "메종 마르지엘라 뉴스레터 구독 취소 <br></br>이 확인란을 선택하면 Maison Margiela 공식 채널의 뉴스 레터 수신이 중단됩니다. <br></br>하지만 귀하가 제공한 연락처 정보를 통해 1:1로 저희 매장의 연락을 받을 수 있습니다. 이러한 연락 또한 중단하고자 하는 경우, 고객 지원 센터로 문의하십시오.",
+            "TEXT_Unsubscribe__c": "이 확인란을 선택하면 Maison Margiela 공식 채널의 뉴스 레터 수신이 중단됩니다. <br></br> 하지만 귀하가 제공한 연락처 정보를 통해 1:1로 저희 매장의 연락을 받을 수 있습니다. 이러한 연락 또한 중단하고자 하는 경우, 상기 마케팅 확인란을 선택 취소하거나 고객 지원 센터로 문의하십시오."
+        },
+        "ru": {
+            "TEXT_Newsletter_Unsubscribe__c": "Отменить подписку на информационные бюллетени Maison Margiela <br></br>Отметив этот флажок, вы перестанете получать информационные бюллетени от официального канала Maison Margiela. <br></br>Однако, сотрудники наших магазинов по-прежнему смогут связаться с вами, используя предоставленную вами контактную информацию. Если вы хотите отказаться и от этого способа связи, свяжитесь с нашей службой поддержки клиентов.",
+            "TEXT_Unsubscribe__c": "Отметив этот флажок, вы перестанете получать информационные бюллетени от официального канала Maison Margiela. <br></br> Однако, сотрудники наших магазинов по-прежнему смогут связаться с вами, используя предоставленную вами контактную информацию. Если вы хотите отказаться и от этого способа связи, снимите флажок маркетинга выше или свяжитесь с нашей службой поддержки клиентов."
+        },
+        "zh-HK": {
+            "TEXT_Newsletter_Unsubscribe__c": "取消訂閱 Maison Margiela 通訊 <br></br> 勾選此選框，您將停止接收來自 Maison Margiela 官方頻道的通訊。<br></br> 但是，我們的商店仍會透過您所提供的聯絡資料以 1 對 1 的方式與您聯繫。 如果您也想停止這些通信，您可以聯絡我們的客戶服務。",
+            "TEXT_Unsubscribe__c": "勾選此選框，您將停止接收來自 Maison Margiela 官方頻道的通訊。<br></br> 但是，我們的商店仍會透過您所提供的聯絡資料以 1 對 1 的方式與您聯繫。 如果您也想停止這些通信，您可以取消選擇上面的促銷選項或聯絡我們的客戶服務。"
+        },
+        "zh-CN": {
+            "TEXT_Newsletter_Unsubscribe__c": "退订 Maison Margiela 时事通讯 <br></br> 勾选此选框，您将停止接收来自 Maison Margiela 官方频道的时事信息。 <br></br> 但我们的商店仍会通过您所提供的联系信息与您一对一联系。如果您想终止这些互动，您可以联系我们的客服。",
+            "TEXT_Unsubscribe__c": "勾选此选框，您将停止接收来自 Maison Margiela 官方频道的时事信息。 <br></br> 但我们的商店仍会通过您所提供的联系信息与您一对一联系。如果您想停止这些互动，您可以取消选中上面的“营销活动”复选框或联系我们的客服。"
+        },
+        "zh-TW": {
+            "TEXT_Newsletter_Unsubscribe__c": "停止收取 Maison Margiela 通訊 <br></br> 勾選此選框，您將停止接收來自 Maison Margiela 官方渠道的通訊。 <br></br> 但我們的分店仍會透過您所提供的聯絡資料，以１對１的方式與您聯絡。若您也想停止這些通訊，可聯絡我們的客戶服務。",
+            "TEXT_Unsubscribe__c": "勾選此選框，您將停止接收來自 Maison Margiela 官方渠道的通訊。<br></br> 但我們的分店仍會透過您所提供的聯絡資料，以１對１的方式與您聯絡。若您也想停止這些通訊，可在上方的營銷選項中按一下來取消選擇，或與我們的客戶服務聯絡。"
+        }
+    }
+}
